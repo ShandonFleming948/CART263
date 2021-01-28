@@ -19,7 +19,8 @@ let animals = [];
 
 function preload() {
   for (let i = 0; i < NUM_ANIMAL_IMAGES; i++) {
-
+    let animalImage = loadImage(`assets/images/animal${i}.png`);
+    animalImages.push(animalImage);
   }
 }
 
@@ -28,7 +29,16 @@ function preload() {
 Description of setup
 */
 function setup() {
+  createCanvas(windowWidth,windowHeight);
 
+  //insert the animals
+  for (let i = 0; i < NUM_ANIMALS; i++) {
+    let x = random(0, width);
+    let y = random(0, height);
+    let animalImage = random(animalImages);
+    let animal = new Animal(x, y, animalImage);
+    animals.push(animal);
+  }
 }
 
 
