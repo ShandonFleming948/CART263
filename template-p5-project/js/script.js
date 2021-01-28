@@ -46,5 +46,9 @@ function setup() {
 Description of draw()
 */
 function draw() {
+  background(0, 225, 0);
 
+  for (let i = 0; i < animals.length; i++) {
+    animals[i].update();
+  }
 }
