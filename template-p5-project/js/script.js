@@ -68,8 +68,11 @@ function mousePressed() {
   sausageDog.mousePressed();
 }
 
-if (SausageDog.overlap = true) {
+if (SausageDog.overlap = true && setTimeout() = false) {
   timeIsUp() = false
+}
+elseif (SausageDog.overlap = false && setTimeout() = true) {
+  timeIsUp() = true
 }
 
 
