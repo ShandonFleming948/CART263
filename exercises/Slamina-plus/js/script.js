@@ -145,6 +145,7 @@ const animals = [
     ];
 
     let currentAnimal = ``;
+    let currentAnswer = ``;
 
 /**
 Description of preload
@@ -158,7 +159,17 @@ function preload() {
 Description of setup
 */
 function setup() {
+ if (annyang) {
+   let commands = {
+     'I think it is *animal': guessAnimal
+   };
+   annyang.addCommands(commands);
+   annyang.start();
 
+   textSize(32);
+   textStyle(BOLD);
+   textAlign(CENTER, CENTER);
+ }
 }
 
 
@@ -167,6 +178,16 @@ Description of draw()
 */
 function draw() {
 
+}
+
+function mousePressed() {
+  currentAnimal = random(animals);
+  let reverseAnimal = reverseString(currentAnimal);
+  responsiveVoice.speak(reverseAnimal);
+}
+
+function guessAnimal(animal) {
+  currentAnswer = animal;
 }
 
 /**
