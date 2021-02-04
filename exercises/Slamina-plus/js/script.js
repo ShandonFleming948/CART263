@@ -159,6 +159,8 @@ function preload() {
 Description of setup
 */
 function setup() {
+ createCanvas(windowWidth, windowHeight);
+
  if (annyang) {
    let commands = {
      'I think it is *animal': guessAnimal
@@ -177,7 +179,15 @@ function setup() {
 Description of draw()
 */
 function draw() {
+  background(0);
 
+  if (currentAnswer === currentAnimal) {
+    fill(0, 255, 0);
+  }
+  else {
+    fill(255, 0, 0);
+  }
+  text(currentAnswer, width/2, height/2)
 }
 
 function mousePressed() {
