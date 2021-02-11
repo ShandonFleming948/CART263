@@ -35,6 +35,8 @@ Description of setup
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
+  generateSpyProfile();
+
 }
 
 function generateSpyProfile() {
@@ -44,6 +46,8 @@ function generateSpyProfile() {
   spyProfile.secretWeapon = random(objectData.objects);
   let card = random(tarotData.tarot_interpretations);
   spyProfile.password = random(card.keywords);
+
+  localStorage.setItem(`spy-profile-data`,JSON.stringify(spyProfile));
 }
 
 /**
