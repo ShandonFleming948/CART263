@@ -35,8 +35,16 @@ Description of setup
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  generateSpyProfile();
-
+  let data = JSON.parse(localStorage.getItem(`spy-profile-data`));
+  if (data !== null) {
+    spyProfile.name = data.name;
+    spyProfie.alias = data.alias;
+    spyProfile.secretWeapon = data.secretWeapon;
+    spyProfile.password = data.password;
+  }
+  else {
+    generateSpyProfile();
+  }
 }
 
 function generateSpyProfile() {
