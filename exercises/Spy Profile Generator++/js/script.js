@@ -25,7 +25,7 @@ Description of preload
 function preload() {
   instrumentsData = loadJSON(`https://raw.githubusercontent.com/dariusk/corpora/master/data/music/instruments.json`);
   objectData = loadJSON(`https://raw.githubusercontent.com/dariusk/corpora/master/data/objects/objects.json`);
-  tarotData = loadJSON{`https://raw.githubusercontent.com/dariusk/corpora/master/data/divination/hexagrams.json`};
+  tarotData = loadJSON(`https://raw.githubusercontent.com/dariusk/corpora/master/data/divination/hexagrams.json`);
 }
 
 
@@ -35,9 +35,16 @@ Description of setup
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  spyProfile.name = prompt(`Agent, enter your name here`);
 }
 
+function generateSpyProfile() {
+  spyProfile.name = prompt(`Agent, enter your name here`);
+  let instrument = random(instrumentData.instruments);
+  spyprofile.alias = `The ${instrument}`;
+  spyProfile.secretWeapon = random(objectData.objects);
+  let card = random(tarotData.tarot_interpretations);
+  spyProfile.password = random(card.keywords);
+}
 
 /**
 Description of draw()
