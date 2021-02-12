@@ -1,15 +1,16 @@
 "use strict";
 
 /**
-Title of Project
-Author Name
+Spy Profile Generator++
+Shandon Fleming
 
-This is a template. You must fill in the title,
-author, and this description to match your project!
+This code displays a simulation in which once the user enters his/her name,
+he/she is assigned a personal spy profile.
 */
 
 // password: expression
 
+//if the user enters an incorrect password, all of the information will be REDACTED
 let spyProfile = {
   name: `**REDACTED**`,
   alias: `**REDACTED**`,
@@ -19,6 +20,7 @@ let spyProfile = {
   assignedLocation: `**REDACTED**`,
 };
 
+//created variables for the JSON files which will be undefined until they are randomly assigned
 let instrumentData = undefined;
 let objectData = undefined;
 let tarotData = undefined;
@@ -26,7 +28,7 @@ let governmentData = undefined;
 let countryData = undefined;
 
 /**
-Description of preload
+the url's for all of the JSON files
 */
 function preload() {
   instrumentData = loadJSON(`https://raw.githubusercontent.com/dariusk/corpora/master/data/music/instruments.json`);
@@ -38,7 +40,7 @@ function preload() {
 
 
 /**
-Description of setup
+set up the canvas, the profile (if password is correct), and the redacted page (if the password is incorrect)
 */
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -60,6 +62,7 @@ function setup() {
   }
 }
 
+//this function pulls at random from the JSON lists
 function generateSpyProfile() {
   spyProfile.name = prompt(`Agent, enter your name here`);
   let instrument = random(instrumentData.instruments);
@@ -74,7 +77,7 @@ function generateSpyProfile() {
 }
 
 /**
-Description of draw()
+this function manages and displays the color, text, and the layout of the profile
 */
 function draw() {
   background(0);
