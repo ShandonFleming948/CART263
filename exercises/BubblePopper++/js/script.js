@@ -15,7 +15,20 @@ let handpose = undefined;
 //the current set of predicitons
 let predictions = [];
 //the Bubble
-let bubble = undefined;
+let bubbleSet = {
+  //an array to store the bubbles
+  bubbles: [],
+  //number of bubbles
+  numBubbles: 3,
+  //the color of the bubble
+  bubbleColor: {
+    r: 209,
+    g: 245,
+    b: 255
+  }
+};
+
+
 
 /**
 Description of setup
@@ -55,7 +68,7 @@ function setup() {
 Description of draw()
 */
 function draw() {
-  background(0);
+  background(0, 200, 255);
 
   if (predictions.length > 0) {
     let hand = predictions[0];
@@ -99,7 +112,7 @@ function draw() {
     }
 
     push();
-    fill(0, 100, 200);
+    fill(209, 245, 255);
     noStroke();
     ellipse(bubble.x, bubble.y, bubble.size);
     pop();
