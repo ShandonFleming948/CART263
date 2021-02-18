@@ -58,8 +58,8 @@ function draw() {
   background(0);
 
   if (predictions.length > 0) {
-    let hand = predictions(0);
-    let index = hand.anntations.indexFinger;
+    let hand = predictions[0];
+    let index = hand.annotations.indexFinger;
     let tip = index[3];
     let base = index[0];
     let tipX = tip[0];
