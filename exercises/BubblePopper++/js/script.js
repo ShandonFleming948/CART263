@@ -12,6 +12,8 @@ author, and this description to match your project!
 let video = undefined;
 //the handpose model
 let handpose = undefined;
+//the current set of predicitons
+let predictions = [];
 
 /**
 Description of setup
@@ -29,6 +31,12 @@ function setup() {
   }, function () {
     console.log(`Model loaded.`);
   });
+
+  //listen for predictions
+  handpose.on(`predict`, function (results) {
+    console.log(results);
+    predictions = results;
+  });
 }
 
 
@@ -36,5 +44,10 @@ function setup() {
 Description of draw()
 */
 function draw() {
+  background(0);
 
+  if (predictions.length > 0) {
+    let hand = predictions(0);
+    let index = hand.anntations.indexFinger;
+  }
 }
