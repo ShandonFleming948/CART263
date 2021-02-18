@@ -14,6 +14,8 @@ let video = undefined;
 let handpose = undefined;
 //the current set of predicitons
 let predictions = [];
+//the Bubble
+let bubble = undefined;
 
 /**
 Description of setup
@@ -37,6 +39,15 @@ function setup() {
     console.log(results);
     predictions = results;
   });
+
+  //our Bubble
+  bubble = {
+    x: random(width),
+    y: height,
+    size: 100,
+    vx: 0,
+    vy: -2,
+  };
 }
 
 
@@ -55,5 +66,22 @@ function draw() {
     let tipY = tip[1];
     let baseX = base[0];
     let baseY = base[1];
+
+    push();
+    noFill();
+    stroke(255, 255, 255);
+    strokeWeight(2);
+    line(baseX, baseY, tipX, tipY);
+    pop();
+
+    push();
+    noStroke();
+    fill(255,0,0)
+    ellipse(baseX, baseY, 20);
+    pop();
   }
+
+    //moves the bubble
+    bubble.x += bubble.vx;
+    bubble.y += bubble.vy;
 }
