@@ -68,6 +68,7 @@ function draw() {
     let baseY = base[1];
 
     push();
+    //the body of the pin
     noFill();
     stroke(255, 255, 255);
     strokeWeight(2);
@@ -75,13 +76,31 @@ function draw() {
     pop();
 
     push();
+    //the head of the pin
     noStroke();
     fill(255,0,0)
     ellipse(baseX, baseY, 20);
     pop();
+
+    let d = dist(tipX, tipY, bubble.x, bubble.y);
+    if (d < bubble.size/2) {
+      bubble.x = random(width);
+      bubble.y = height;
+    }
   }
 
     //moves the bubble
     bubble.x += bubble.vx;
     bubble.y += bubble.vy;
+
+    if (bubble.y < 0) {
+      bubble.x = random(width);
+      bubble.y = height;
+    }
+
+    push();
+    fill(0, 100, 200);
+    noStroke();
+    ellipse(bubble.x, bubble.y, bubble.size);
+    pop();
 }
