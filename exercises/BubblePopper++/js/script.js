@@ -53,14 +53,22 @@ function setup() {
     predictions = results;
   });
 
-  //our Bubble
-  bubble = {
-    x: random(width),
-    y: height,
-    size: 100,
-    vx: 0,
-    vy: -2,
-  };
+  // //our Bubble
+  // bubble = {
+  //   x: random(width),
+  //   y: height,
+  //   size: 100,
+  //   vx: 0,
+  //   vy: -2,
+  // };
+
+  //create the bubbles by counting up to the number of bubble
+  for (let i = 0; i < bubbleSet.numBubbles; i++) {
+    //create a new bubble
+    let bubble = createBubble();
+    //add the bubble to the array of bubble
+    bubbleSet.bubbles.push(bubble);
+  }
 }
 
 
@@ -111,9 +119,24 @@ function draw() {
       bubble.y = height;
     }
 
+    for (let i = 0; i < bubbleSet.numBubbles; i++) {
+    let bubble = bubbleSet.bubbles[i];
+    displayBubble(bubble);
+}
+
+
+function createBubble() {
     push();
     fill(209, 245, 255);
     noStroke();
     ellipse(bubble.x, bubble.y, bubble.size);
     pop();
-}
+ }
+
+ function displayBubble(bubble) {
+     push();
+     fill(209, 245, 255);
+     noStroke();
+     ellipse(bubble.x, bubble.y, bubble.size);
+     pop();
+  }
