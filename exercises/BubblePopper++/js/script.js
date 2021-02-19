@@ -8,85 +8,73 @@ author, and this description to match your project!
 
 "use strict";
 
-//stores the user's webcam
-let video = undefined;
-//the handpose model
-let handpose = undefined;
-//the current set of predicitons
-let predictions = [];
 //the Bubble
-let bubble = undefined
+let bubble = undefined;
+
+//the pin
+let pin = undefined;
 
 /**
 Description of setup
 */
 function setup() {
-  createCanvas(640, 480);
+  createCanvas(windowWidth, windowHeight);
 
-  //accesses the user's webcam
-  video = createCapture(VIDEO);
-  video.hide();
-
-  //load the handpose model
-  handpose = ml5.handpose(video, {
-    flipHorizontal: true
-  }, function () {
-    console.log(`Model loaded.`);
-  });
-
-  //listen for predictions
-  handpose.on(`predict`, function (results) {
-    console.log(results);
-    predictions = results;
-  });
-
-  //our Bubble
-  bubble = {
+  //the Bubble
+  bubble1 = {
     x: random(width),
     y: height,
     size: 100,
     vx: 0,
     vy: -2,
   };
+
+  //the Bubble
+  bubble2 = {
+    x: random(width),
+    y: height,
+    size: 100,
+    vx: 0,
+    vy: -2,
+  };
+
+  //the Bubble
+  bubble3 = {
+    x: random(width),
+    y: height,
+    size: 100,
+    vx: 0,
+    vy: -2,
+  };
+
+  //the pin
+  pin = {
+    x: mouseX,
+    y: mouseY,
+    size: 10,
+  };
 }
+
 
 /**
 Description of draw()
 */
 function draw() {
-  background(0, 200, 255);
-
-  if (predictions.length > 0) {
-    let hand = predictions[0];
-    let index = hand.annotations.indexFinger;
-    let tip = index[3];
-    let base = index[0];
-    let tipX = tip[0];
-    let tipY = tip[1];
-    let baseX = base[0];
-    let baseY = base[1];
+  background(22, 194, 242);
 
     push();
     //the body of the pin
     noFill();
     stroke(255, 255, 255);
     strokeWeight(2);
-    line(baseX, baseY, tipX, tipY);
     pop();
 
-    push();
-    //the head of the pin
-    noStroke();
-    fill(255,0,0)
-    ellipse(baseX, baseY, 20);
-    pop();
-
-    let d = dist(tipX, tipY, bubble.x, bubble.y);
+    let d = dist(mouseX, mouseY, bubble.x, bubble.y);
     if (d < bubble.size/2) {
       bubble.x = random(width);
       bubble.y = height;
     }
-  }
+
 
     //moves the bubble
     bubble.x += bubble.vx;
@@ -102,4 +90,4 @@ function draw() {
     noStroke();
     ellipse(bubble.x, bubble.y, bubble.size);
     pop();
- }
+}
