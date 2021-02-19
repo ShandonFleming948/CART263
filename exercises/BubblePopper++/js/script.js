@@ -14,6 +14,14 @@ let bubble = undefined;
 //the pin
 let pin = undefined;
 
+//pop up alert to provide the user with instructions for the simulation
+    alert(`Use the mouse to pop the bubbles that appear on your screen for as long as possible. If a bubble reaches the top of the screen the game will be over.`);
+
+    if (bubble.y === 10) {
+      //pop up alert to provide the user with instructions for the simulation
+    alert(`GAME OVER - RELOAD THE PAGE TO RESTART`);
+  };
+
 /**
 Description of setup
 */
@@ -21,30 +29,12 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 
   //the Bubble
-  bubble1 = {
+  bubble = {
     x: random(width),
     y: height,
     size: 100,
     vx: 0,
-    vy: -2,
-  };
-
-  //the Bubble
-  bubble2 = {
-    x: random(width),
-    y: height,
-    size: 100,
-    vx: 0,
-    vy: -2,
-  };
-
-  //the Bubble
-  bubble3 = {
-    x: random(width),
-    y: height,
-    size: 100,
-    vx: 0,
-    vy: -2,
+    vy: -7,
   };
 
   //the pin
@@ -54,7 +44,6 @@ function setup() {
     size: 10,
   };
 }
-
 
 /**
 Description of draw()
@@ -74,7 +63,6 @@ function draw() {
       bubble.x = random(width);
       bubble.y = height;
     }
-
 
     //moves the bubble
     bubble.x += bubble.vx;
