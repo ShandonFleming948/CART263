@@ -15,12 +15,22 @@ let backgroundColor = {
 };
 let angle = 0;
 
+
+let userCircle = {
+  x:50,
+  y:550,
+  size:50,
+  vx:1,
+  vy:1,
+  speed:2
+}
+
 /**
 Description of preload
 */
-function preload() {
-
-}
+// function preload() {
+//
+// }
 
 
 /**
@@ -31,12 +41,41 @@ function setup() {
 }
 
 
+//keyboard controls for the white circle
+function handleInput() {
+  if (keyIsDown(LEFT_ARROW)) {
+    userCircle.vx = -userCircle.speed;
+  }
+  else if (keyIsDown(RIGHT_ARROW)) {
+    userCircle.vx = userCircle.speed;
+  }
+  else {
+    userCircle.vx = 0;
+  }
+
+  if (keyIsDown(UP_ARROW)) {
+    userCircle.vy = -userCircle.speed;
+  }
+  else if (keyIsDown(DOWN_ARROW)) {
+    userCircle.vy = userCircle.speed;
+  }
+  else {
+    userCircle.vy = 0;
+  }
+}
+
+//circles movement
+function move() {
+  userCircle.x = userCircle.x + userCircle.vx;
+  userCircle.y = userCircle.y + userCircle.vy;
+}
+
+
 /**
 Description of draw()
 */
 function draw() {
   background(0, 0, 0);
-
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
@@ -474,6 +513,16 @@ function draw() {
   angle += 0.0002;
 
 
-
-
+  ellipse(userCircle.x,userCircle.y,userCircle.size);
+  noStroke()
+  fill(255);
+  ellipse(userCircle.x,userCircle.y,userCircle.size);
 }
+
+
+// function display() {
+//   ellipse(userCircle.x,userCircle.y,userCircle.size);
+//   noStroke()
+//   fill(255);
+//   ellipse(userCircle.x,userCircle.y,userCircle.size);
+// }
