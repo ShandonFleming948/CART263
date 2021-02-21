@@ -39,81 +39,13 @@ function draw() {
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(100, 50, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(100, 100, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(100, 150, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(100, 200, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(100, 250, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(100, 300, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(100, 350, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(100, 400, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(100, 450, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(100, 500, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(100, 550, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  // --------------------
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
   ellipse(200, 50, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(200, 100, 30);
+  ellipse(300, 100, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
@@ -125,13 +57,13 @@ function draw() {
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(200, 200, 30);
+  ellipse(300, 200, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(200, 250, 30);
+  ellipse(350, 250, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
@@ -143,13 +75,13 @@ function draw() {
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(200, 350, 30);
+  ellipse(250, 350, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(200, 400, 30);
+  ellipse(350, 400, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
@@ -161,7 +93,7 @@ function draw() {
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(200, 500, 30);
+  ellipse(300, 500, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
@@ -175,81 +107,13 @@ function draw() {
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(300, 50, 30);
+  ellipse(450, 50, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(300, 100, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(300, 150, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(300, 200, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(300, 250, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(300, 300, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(300, 350, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(300, 400, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(300, 450, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(300, 500, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(300, 550, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  // --------------------
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(400, 50, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(400, 100, 30);
+  ellipse(500, 100, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
@@ -261,7 +125,7 @@ function draw() {
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(400, 200, 30);
+  ellipse(500, 200, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
@@ -279,13 +143,13 @@ function draw() {
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(400, 350, 30);
+  ellipse(550, 350, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(400, 400, 30);
+  ellipse(450, 400, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
@@ -297,81 +161,13 @@ function draw() {
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(400, 500, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(400, 550, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  // --------------------
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(500, 50, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(500, 100, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(500, 150, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(500, 200, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(500, 250, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(500, 300, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(500, 350, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(500, 400, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(500, 450, 30);
-  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
-  angle += 0.002;
-
-  colorMode(HSB);
-  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
   ellipse(500, 500, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(500, 550, 30);
+  ellipse(450, 550, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
@@ -379,7 +175,7 @@ function draw() {
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(600, 50, 30);
+  ellipse(700, 50, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
@@ -391,7 +187,7 @@ function draw() {
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(600, 150, 30);
+  ellipse(650, 150, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
@@ -403,25 +199,25 @@ function draw() {
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(600, 250, 30);
+  ellipse(700, 250, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(600, 300, 30);
+  ellipse(650, 300, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(600, 350, 30);
+  ellipse(550, 350, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(600, 400, 30);
+  ellipse(500, 400, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
@@ -433,13 +229,217 @@ function draw() {
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(600, 500, 30);
+  ellipse(550, 500, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
   colorMode(HSB);
   fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
-  ellipse(600, 550, 30);
+  ellipse(650, 550, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  // --------------------
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(700, 50, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(850, 100, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(800, 150, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(850, 200, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(700, 250, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(750, 300, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(800, 350, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(750, 400, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(700, 450, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(800, 500, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(750, 550, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  // --------------------
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(900, 50, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(800, 100, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(950, 150, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(900, 200, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(800, 250, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(850, 300, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(800, 350, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(900, 400, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(950, 450, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(850, 500, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(900, 550, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  // --------------------
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(1100, 50, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(1000, 100, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(1100, 150, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(1000, 200, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(1100, 250, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(1000, 300, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(1100, 350, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(1000, 400, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(1100, 450, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(1000, 500, 30);
+  backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
+  angle += 0.002;
+
+  colorMode(HSB);
+  fill(backgroundColor.h, backgroundColor.s, backgroundColor.b);
+  ellipse(1100, 550, 30);
   backgroundColor.b = map(sin(angle), -1, 1, 20, 100);
   angle += 0.002;
 
