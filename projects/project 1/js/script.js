@@ -18,8 +18,8 @@ let glowingCircles = []
 
 let userCircle = {
   x:50,
-  y:550,
-  size:50,
+  y:300,
+  size:40,
   vx:0,
   vy:0,
   speed:2
@@ -65,6 +65,16 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 
   glowingCircles.push(new glowingCircle(200, 50));
+
+  glowingCircles.push(new glowingCircle(350, 50));
+
+  glowingCircles.push(new glowingCircle(550, 50));
+
+  glowingCircles.push(new glowingCircle(700, 50));
+
+  glowingCircles.push(new glowingCircle(350, 550));
+
+  glowingCircles.push(new glowingCircle(550, 550));
 
   glowingCircles.push(new glowingCircle(300, 100));
 
@@ -196,6 +206,9 @@ function setup() {
 
   glowingCircles.push(new glowingCircle(1100, 550));
 
+  glowingCircles.push(new glowingCircle(500, 280));
+
+  glowingCircles.push(new glowingCircle(590, 270));
 }
 
 
