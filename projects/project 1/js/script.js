@@ -19,10 +19,10 @@ let glowingCircles = []
 let userCircle = {
   x:50,
   y:300,
-  size:40,
+  size:37,
   vx:0,
   vy:0,
-  speed:2
+  speed:2.7
 }
 
 class glowingCircle {
@@ -206,9 +206,38 @@ function setup() {
 
   glowingCircles.push(new glowingCircle(1100, 550));
 
+  glowingCircles.push(new glowingCircle(1050, 330));
+
+  glowingCircles.push(new glowingCircle(1050, 160));
+
+  glowingCircles.push(new glowingCircle(1050, 80));
+
+  glowingCircles.push(new glowingCircle(1050, 470));
+
+  glowingCircles.push(new glowingCircle(1050, 240));
+
+  glowingCircles.push(new glowingCircle(1050, 520));
+
+  glowingCircles.push(new glowingCircle(1050, 400));
+
   glowingCircles.push(new glowingCircle(500, 280));
 
   glowingCircles.push(new glowingCircle(590, 270));
+
+  glowingCircles.push(new glowingCircle(640, 380));
+
+  glowingCircles.push(new glowingCircle(920, 330));
+
+  glowingCircles.push(new glowingCircle(930, 250));
+
+  glowingCircles.push(new glowingCircle(830, 430));
+
+  glowingCircles.push(new glowingCircle(650, 510));
+
+  glowingCircles.push(new glowingCircle(720, 130));
+
+  glowingCircles.push(new glowingCircle(730, 200));
+
 }
 
 
@@ -239,6 +268,12 @@ function handleInput() {
 function move() {
   userCircle.x = userCircle.x + userCircle.vx;
   userCircle.y = userCircle.y + userCircle.vy;
+
+  userCircle.x = constrain(userCircle.x,50,950);
+  userCircle.y = constrain(userCircle.y,51,550);
+    if (userCircle.x > 949) {
+      userCircle.y = constrain(userCircle.y,50,550);
+    }
 }
 
 
