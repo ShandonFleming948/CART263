@@ -8,12 +8,6 @@ author, and this description to match your project!
 
 "use strict";
 
-// let backgroundColor = {
-//   h: 284,
-//   s: 100,
-//   b: 0
-// };
-
 let glowingCircles = []
 
 let userCircle = {
@@ -48,14 +42,6 @@ class glowingCircle {
   }
 }
 
-
-
-/**
-Description of preload
-*/
-// function preload() {
-//
-// }
 
 
 /**
@@ -305,7 +291,8 @@ function checkOverlap() {
   for (let i = 0; i < glowingCircles.length; i++){
     let d = dist(userCircle.x,userCircle.y,glowingCircles[i].x,glowingCircles[i].y);
     if (d < glowingCircles[i].radius/2 + userCircle.size/2) {
-      console.log("hit");
-    };
+      // console.log("hit");
+      userCircle.size = 42
+    }
   }
 }
