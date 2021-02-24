@@ -66,6 +66,10 @@ function setup() {
 
   glowingCircles.push(new glowingCircle(200, 50));
 
+  glowingCircles.push(new glowingCircle(300, 300));
+
+  glowingCircles.push(new glowingCircle(460, 350));
+
   glowingCircles.push(new glowingCircle(350, 50));
 
   glowingCircles.push(new glowingCircle(550, 50));
@@ -269,8 +273,8 @@ function move() {
   userCircle.x = userCircle.x + userCircle.vx;
   userCircle.y = userCircle.y + userCircle.vy;
 
-  userCircle.x = constrain(userCircle.x,50,950);
-  userCircle.y = constrain(userCircle.y,51,550);
+  userCircle.x = constrain(userCircle.x,50,1250);
+  userCircle.y = constrain(userCircle.y,50,550);
     if (userCircle.x > 949) {
       userCircle.y = constrain(userCircle.y,50,550);
     }
