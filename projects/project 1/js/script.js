@@ -54,6 +54,10 @@ function setup() {
 
   glowingCircles.push(new glowingCircle(200, 50));
 
+  glowingCircles.push(new glowingCircle(420, 480));
+
+  glowingCircles.push(new glowingCircle(290, 440));
+
   glowingCircles.push(new glowingCircle(300, 300));
 
   glowingCircles.push(new glowingCircle(460, 350));
@@ -294,7 +298,7 @@ function checkOverlap() {
     let d = dist(userCircle.x,userCircle.y,glowingCircles[i].x,glowingCircles[i].y);
     if (d < glowingCircles[i].radius/2 + userCircle.size/2) {
       // console.log("hit");
-      userCircle.size = 42
+      userCircle.size = 44
     }
   }
 }
