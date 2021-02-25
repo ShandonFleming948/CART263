@@ -1,11 +1,10 @@
 /**
-Project 1
+Project 1 - Toxicity
 Shandon Fleming
 
 This is a template. You must fill in the title,
 author, and this description to match your project!
 
-remember to make a readMe
 */
 
 "use strict";
@@ -18,7 +17,8 @@ let userCircle = {
   size:37,
   vx:0,
   vy:0,
-  speed:4
+  speed:4,
+  hit: 0,
 }
 
 class glowingCircle {
@@ -33,7 +33,8 @@ class glowingCircle {
       s: 100,
       b: 0
       };
-      this.angleSpeed = random(0.02, 0.05)
+      this.angleSpeed = random(0.02, 0.05);
+      this.active = true;
   }
   display(){
     colorMode(HSB);
@@ -284,7 +285,9 @@ function draw() {
   move();
 
   for (let i = 0; i < glowingCircles.length; i++){
-    glowingCircles[i].display();
+     if (glowingCircles[i].active) {
+       glowingCircles[i].display();
+     }
   }
 
   ellipse(userCircle.x,userCircle.y,userCircle.size);
@@ -296,9 +299,15 @@ function draw() {
 function checkOverlap() {
   for (let i = 0; i < glowingCircles.length; i++){
     let d = dist(userCircle.x,userCircle.y,glowingCircles[i].x,glowingCircles[i].y);
-    if (d < glowingCircles[i].radius/2 + userCircle.size/2) {
+    if (d < glowingCircles[i].radius/2 + userCircle.size/2 && glowingCircles[i].active) {
       // console.log("hit");
       userCircle.size = 44
+      glowingCircles[i].active = false
+      userCircle.hit = userCircle.hit + 1
+    if (userCircle.hit === 2) {
+      console.log("game over")
+    }
+
     }
   }
 }
