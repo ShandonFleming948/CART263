@@ -18,7 +18,7 @@ let userCircle = {
   size:37,
   vx:0,
   vy:0,
-  speed:3
+  speed:4
 }
 
 class glowingCircle {
