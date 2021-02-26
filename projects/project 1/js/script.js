@@ -282,20 +282,20 @@ function draw() {
     lose();
   }
 
-  checkOverlap();
-  handleInput();
-  move();
+  // checkOverlap();
+  // handleInput();
+  // move();
 
-  for (let i = 0; i < glowingCircles.length; i++){
-     if (glowingCircles[i].active) {
-       glowingCircles[i].display();
-     }
-  }
-
-  ellipse(userCircle.x,userCircle.y,userCircle.size);
-  noStroke()
-  fill(255);
-  ellipse(userCircle.x,userCircle.y,userCircle.size);
+  // for (let i = 0; i < glowingCircles.length; i++){
+  //    if (glowingCircles[i].active) {
+  //      glowingCircles[i].display();
+  //    }
+  // }
+  //
+  // ellipse(userCircle.x,userCircle.y,userCircle.size);
+  // noStroke()
+  // fill(255);
+  // ellipse(userCircle.x,userCircle.y,userCircle.size);
 }
 
 
@@ -317,6 +317,17 @@ function simulation() {
   move();
   setup();
   checkOverlap();
+
+  for (let i = 0; i < glowingCircles.length; i++){
+     if (glowingCircles[i].active) {
+       glowingCircles[i].display();
+     }
+  }
+
+  ellipse(userCircle.x,userCircle.y,userCircle.size);
+  noStroke()
+  fill(255);
+  ellipse(userCircle.x,userCircle.y,userCircle.size);
 }
 
 //display "lose" page if user touches a red circle
@@ -359,14 +370,3 @@ function checkOverlap() {
       state = `win`;
     }
 }
-
-// //leaves title page and starts simulation
-// function voiceCommand() {
-//   if (annyang) {
-//     let commands = {
-//       'Go': simulation
-//     };
-//     annyang.addCommands(commands);
-//     annyang.start();
-//   }
-// }
