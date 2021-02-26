@@ -315,7 +315,7 @@ function title() {
 function simulation() {
   handleInput();
   move();
-  setup();
+  // setup();
   checkOverlap();
 
   for (let i = 0; i < glowingCircles.length; i++){
@@ -328,6 +328,9 @@ function simulation() {
   noStroke()
   fill(255);
   ellipse(userCircle.x,userCircle.y,userCircle.size);
+
+  fill(255);
+  square(1160,280,50);
 }
 
 //display "lose" page if user touches a red circle
@@ -365,7 +368,7 @@ function checkOverlap() {
       }
     }
   }
-    let d = dist(950,userCircle.x);
+    let d = dist(1185,305,userCircle.x,userCircle.y);
     if (d <  + userCircle.size/2) {
       state = `win`;
     }
