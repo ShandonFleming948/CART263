@@ -2,15 +2,17 @@
 Project 1 - Toxicity
 Shandon Fleming
 
-This is a template. You must fill in the title,
-author, and this description to match your project!
-
+The code below runs a simulation in which the user has to use the keyboard controls to guide
+a circle through an array of glowing circles to the other side without coming into contact with
+too many of them.
 */
 
 "use strict";
 
+//array for the glowing circles
 let glowingCircles = []
 
+//variable for the user's circle and its properties
 let userCircle = {
   x:50,
   y:300,
@@ -24,7 +26,7 @@ let userCircle = {
 let state = `title`; //can be title, simulation, win, lose
 
 /**
-Description of setup
+This setup runs annyang when the code is loaded so that the user has to use voice controls to start the game
 */
 function setup() {
 
@@ -39,9 +41,10 @@ function setup() {
     annyang.addCommands(commands);
     annyang.start();
   }
-
+  //the canvas covers the entire screen
   createCanvas(windowWidth, windowHeight);
 
+  //all of the individual glowing circles and their individual positions
   glowingCircles.push(new GlowingCircle(200, 50));
 
   glowingCircles.push(new GlowingCircle(420, 480));
@@ -250,7 +253,7 @@ function handleInput() {
   }
 }
 
-//circles movement
+//run the userCircle's movement
 function move() {
   userCircle.x = userCircle.x + userCircle.vx;
   userCircle.y = userCircle.y + userCircle.vy;
@@ -264,7 +267,7 @@ function move() {
 
 
 /**
-Description of draw()
+display the background color and the four states
 */
 function draw() {
   background(0, 0, 0);
@@ -281,21 +284,6 @@ function draw() {
   else if (state === `lose`) {
     lose();
   }
-
-  // checkOverlap();
-  // handleInput();
-  // move();
-
-  // for (let i = 0; i < glowingCircles.length; i++){
-  //    if (glowingCircles[i].active) {
-  //      glowingCircles[i].display();
-  //    }
-  // }
-  //
-  // ellipse(userCircle.x,userCircle.y,userCircle.size);
-  // noStroke()
-  // fill(255);
-  // ellipse(userCircle.x,userCircle.y,userCircle.size);
 }
 
 
@@ -305,35 +293,37 @@ function title() {
   textSize(20);
   fill(3, 223, 252);
   textAlign(CENTER,CENTER);
-  text(`Pass through the array of glowing circles and make it to the other side without touching any of them.
-        If you touch one glowing circles, the userCircle will get larger. If you touch two glowing circles, you
+  text(`Pass through the array of glowing circles and make it to the white square on the other side without touching
+        any of them. If you touch one glowing circles, the userCircle will get larger. If you touch two glowing circles, you
         will have to restart. Say "go" to start the game.`,width/2,height/2);
   pop();
 }
 
-//run simulation
+//run the simulation/the game
 function simulation() {
   handleInput();
   move();
-  // setup();
   checkOverlap();
 
+  //display all of the glowing circles in the glowingCircles array
   for (let i = 0; i < glowingCircles.length; i++){
      if (glowingCircles[i].active) {
        glowingCircles[i].display();
      }
   }
 
+  //display the userCircle
   ellipse(userCircle.x,userCircle.y,userCircle.size);
   noStroke()
   fill(255);
   ellipse(userCircle.x,userCircle.y,userCircle.size);
 
+  //display the white square at the finish
   fill(255);
   square(1160,280,50);
 }
 
-//display "lose" page if user touches a red circle
+//display "lose" state/page if user touches too many glowingCirlces
 function lose() {
   push();
   textSize(34);
@@ -343,7 +333,7 @@ function lose() {
   pop();
 }
 
-//display "win" page if user makes it to the green square
+//display "win" page if user makes it to the white square
 function win() {
   push();
   textSize(50);
@@ -353,17 +343,16 @@ function win() {
   pop();
 }
 
-
+/**check if the userCircle has come into contact with too many glowingCircles or if the userCircle made it
+to the white square at the finish*/
 function checkOverlap() {
   for (let i = 0; i < glowingCircles.length; i++){
     let d = dist(userCircle.x,userCircle.y,glowingCircles[i].x,glowingCircles[i].y);
     if (d < glowingCircles[i].radius/2 + userCircle.size/2 && glowingCircles[i].active) {
-      // console.log("hit");
-      userCircle.size = 44
-      glowingCircles[i].active = false
-      userCircle.hit = userCircle.hit + 1
+        userCircle.size = 44
+        glowingCircles[i].active = false
+        userCircle.hit = userCircle.hit + 1
     if (userCircle.hit === 2) {
-      // console.log("game over")
       state = 'lose';
       }
     }
