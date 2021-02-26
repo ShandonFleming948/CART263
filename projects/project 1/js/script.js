@@ -30,7 +30,11 @@ function setup() {
 
   if (annyang) {
     let commands = {
-      'Go': simulation
+      'Go': function() {
+        if (state === `title`) {
+          state = `simulation`;
+        }
+      }
     };
     annyang.addCommands(commands);
     annyang.start();
