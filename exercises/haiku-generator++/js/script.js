@@ -43,7 +43,7 @@ line3P.addEventListener('click', lineClicked);
 
 
 function lineClicked(event) {
-  setNewLine(event.target);
+  fadeOut(event.target, 1);
 }
 
 function fadeOut(element, opacity) {
@@ -55,7 +55,18 @@ function fadeOut(element, opacity) {
     };
   }
   else {
-    //when it is faded out
+    setNewLine(element);
+    fadeIn(element, 0);
+  }
+}
+
+function fadeIn(element, opacity) {
+  opacity += 0.01;
+  element.style['opacity'] = opacity;
+  if (opacity < 1) {
+    requestAnimationFrame(function() {
+      fadeIn(element, opacity);
+    });
   }
 }
 
