@@ -4,3 +4,13 @@
   width: 50vw;
   margin: auto;
 }
+
+.redacted {
+  background-color: black;
+  user-select: none;
+}
+
+.revealed {
+  color: red;
+  text-decoration: underline;
+}
