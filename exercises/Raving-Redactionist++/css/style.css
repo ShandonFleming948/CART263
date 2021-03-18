@@ -1,12 +1,14 @@
 #secret-document {
   font-family: monospace;
   font-size: 1.25rem;
-  width: 50vw;
+  width: auto;
   margin: auto;
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 255, 68);
 }
 
 .redacted {
-  background-color: black;
+  background-color: rgb(0, 255, 68);
   user-select: none;
 }
 
