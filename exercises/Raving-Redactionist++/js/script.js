@@ -8,16 +8,6 @@ author, and this description to match your project!
 
 "use strict";
 
-let barkSFX;
-
-function preload() {
-  barkSFX = loadSound('assets/sounds/bark.wav');
-}
-
-function mousePressed() {
-  barkSFX.play();
-}
-
 $('.top-secret').on('click', redact);
 setInterval(revelation, 2000);
 
