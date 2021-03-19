@@ -8,12 +8,22 @@ author, and this description to match your project!
 
 "use strict";
 
+let barkSFX;
+
+function preload() {
+  barkSFX = loadSound('assets/sounds/bark.wav');
+}
+
+function mousePressed() {
+  barkSFX.play();
+}
+
 $('.top-secret').on('click', redact);
-setInterval(revelation, 500);
+setInterval(revelation, 2000);
 
 function redact(event) {
   $(this).removeClass('revealed');
-  $(this).addClass('redacted').fadeIn(5000);
+  $(this).addClass('redacted').css("display","none").fadeIn(7000);
 }
 
 function revelation() {
