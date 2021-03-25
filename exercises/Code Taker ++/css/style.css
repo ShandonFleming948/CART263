@@ -1,13 +1,18 @@
 #poem {
-  font-size: 1.3rem
+  font-family: monospace;
+  font-size: 1.25rem;
+  width: auto;
+  margin: auto;
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 255, 68);
 }
 
 #answer {
   width: 15rem;
   height:2rem;
-  border: 1px dased black;
+  border: 1px dashed black;
 }
 
 .found {
-  color: blue;
+  color: red;
 }
