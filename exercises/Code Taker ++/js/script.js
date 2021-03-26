@@ -1,20 +1,22 @@
 /**
-Title of Project
-Author Name
+Code Taker ++
+Shandon Fleming
 
-This is a template. You must fill in the title,
-author, and this description to match your project!
+The code below displays a poem that contains a hidden message. To uncover the
+hidden message the user has to pass the mouse over the lines in the poem. Once the user
+does so, he/she has to drag the highlighted units and drop them in a text box below to
+uncover the message.
 */
 
 "use strict";
 
+//the instructions for the game are displayed in an alert
 alert("Scan over the poem to and use the highlighted letters to reveal a secret message.");
-
 
 $('#solved-dialog').dialog({
   autoOpen: false,
   buttons: {
-    "I know.": function(){
+    "Thank you.": function(){
       $(this).dialog('close');
     }
   }
@@ -34,7 +36,7 @@ $(`#answer`).droppable({
     ui.draggable.draggable('disable');
     ui.draggable.removeClass('found');
     //check if the user got the correct answer
-    if ($(this).text() === 'Theremin') {
+    if ($(this).text() === 'coding is awesome') {
       $('#solved-dialog').dialog('open');
     }
   }

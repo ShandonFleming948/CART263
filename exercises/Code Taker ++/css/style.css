@@ -1,5 +1,5 @@
 #poem {
-  font-family: monospace;
+  font-family: Times New Roman (serif);
   font-size: 1.25rem;
   width: auto;
   margin: auto;
@@ -15,4 +15,5 @@
 
 .found {
   color: red;
+  background-color: red;
 }
