@@ -1,3 +1,4 @@
+/* display properties of the poem */
 #poem {
   font-family: Times New Roman (serif);
   font-size: 1.25rem;
@@ -7,12 +8,14 @@
   color: rgb(0, 255, 68);
 }
 
+/* properties of the answer box */
 #answer {
   width: 15rem;
   height:2rem;
   border: 1px dashed black;
 }
 
+/* properties of the highlighted text */
 .found {
   color: red;
   background-color: red;

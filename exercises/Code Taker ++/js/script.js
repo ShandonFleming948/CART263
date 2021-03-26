@@ -13,6 +13,7 @@ uncover the message.
 //the instructions for the game are displayed in an alert
 alert("Scan over the poem to and use the highlighted letters to reveal a secret message.");
 
+//displays the user-interactive dialog whhen the puzzle is solved
 $('#solved-dialog').dialog({
   autoOpen: false,
   buttons: {
@@ -22,6 +23,7 @@ $('#solved-dialog').dialog({
   }
 });
 
+//allows the user to drag the highlighted letters
 $('.secret').on('mouseover', function(event) {
   $(this).addClass('found', 550);
   $(this).draggable({
@@ -29,6 +31,7 @@ $('.secret').on('mouseover', function(event) {
   });
 });
 
+//allows the user to drop the highlighted letters
 $(`#answer`).droppable({
   drop: function(event, ui) {
     let letter = ui.draggable.text();
