@@ -10,7 +10,7 @@ author, and this description to match your project!
 "use strict";
 
 //the instructions for the game are displayed in an alert
-alert("Hello there and welcome to a good old game of I SPY. Click the ok button to get started.");
+alert("Hello there and welcome to a good old game of I SPY. Click the ok button and then click anywhere on the screen to get started.");
 
 let greenballImage;
 let redballImage;
@@ -46,5 +46,5 @@ function draw() {
 }
 
 function mousePressed() {
-  responsivevoice.speak("I spy something red");
+  responsiveVoice.speak("I... spy... something red");
 }
