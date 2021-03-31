@@ -6,7 +6,11 @@ This is a template. You must fill in the title,
 author, and this description to match your project!
 */
 
+
 "use strict";
+
+//the instructions for the game are displayed in an alert
+alert("Hello there and welcome to a good old game of I SPY. Click the ok button to get started.");
 
 let greenballImage;
 let redballImage;
@@ -39,4 +43,8 @@ function draw() {
   image(greenballImage,0,0,100,100);
   image(redballImage,400,0,100,100);
   image(blueballImage,800,0,100,100);
+}
+
+function mousePressed() {
+  responsivevoice.speak("I spy something red");
 }
