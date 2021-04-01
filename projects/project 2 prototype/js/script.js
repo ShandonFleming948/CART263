@@ -12,6 +12,13 @@ author, and this description to match your project!
 //the instructions for the game are displayed in an alert
 alert("Hello there and welcome to a good old game of I SPY. Click the ok button and then click anywhere on the screen to get started.");
 
+const clues = [
+    "I spy something blue",
+    "I spy something green",
+    "I spy something red",
+    ];
+
+
 let greenballImage;
 let redballImage;
 let blueballImage;
@@ -40,11 +47,13 @@ Description of draw()
 function draw() {
   background(250);
 
-  image(greenballImage,0,0,100,100);
-  image(redballImage,400,0,100,100);
-  image(blueballImage,800,0,100,100);
+  imageMode(CENTER);
+  image(greenballImage,50,100,100,100);
+  image(redballImage,450,100,100,100);
+  image(blueballImage,850,100,100,100);
 }
 
 function mousePressed() {
-  responsiveVoice.speak("I... spy... something red");
+  currentWord = random(clues);
+  responsiveVoice.speak(currentWord);
 }
