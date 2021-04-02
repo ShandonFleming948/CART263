@@ -1,14 +1,16 @@
 /**
-Title of Project
-Author Name
+Project 2 Prototype (I Spy)
+Shandon Fleming
 
-This is a template. You must fill in the title,
-author, and this description to match your project!
+The code below displays a pototyype for my second project. It runs a simple I SPY game
+in which the computer gives the user a clue and the user interacts with the game by
+using the mouse
 */
 
 
 "use strict";
 
+//a list of possible I SPY clues
 const clues = [
     "I spy something blue",
     "I spy something green",
@@ -19,6 +21,7 @@ let currentClue = ``;
 
 let state = `title`; //can be title, simulation, win, lose
 
+//variables for the three images
 let greenballImage;
 let redballImage;
 let blueballImage;
@@ -26,9 +29,8 @@ let blueballImage;
 //the instructions for the game are displayed in an alert
 alert("Once you click the ok button, click anywhere on the screen to get your first clue.");
 
-/**
-Description of preload
-*/
+
+//loads the images
 function preload() {
   greenballImage = loadImage("assets/images/greenball.jpg");
   redballImage = loadImage("assets/images/redball.png");
@@ -36,9 +38,7 @@ function preload() {
 }
 
 
-/**
-Description of setup
-*/
+//sets up the layout of the page and the positioning of the images
 function setup() {
   createCanvas(1250,600);
 
@@ -51,9 +51,7 @@ function setup() {
 }
 
 
-/**
-Description of draw()
-*/
+//draw displays the states and the three images on the canvas
 function draw() {
   background(250);
 
@@ -80,9 +78,11 @@ function title() {
   pop();
 }
 
+//run the game
 function simulation() {
 }
 
+//pressing the mouse cycles through the states and triggers responsivevoice
 function mousePressed() {
   if (state === 'title') {
     state = 'simulation'
@@ -94,6 +94,7 @@ function mousePressed() {
   }
 }
 
+//checks to see if the user clicked the correct image 
 function clicked() {
   let d = dist(blueballImage.x,blueballImage.y,mouseX,mouseY);
   if (currentClue === "I spy something blue" && d < 50) {
