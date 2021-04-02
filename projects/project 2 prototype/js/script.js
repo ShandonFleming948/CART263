@@ -41,6 +41,13 @@ Description of setup
 */
 function setup() {
   createCanvas(1250,600);
+
+  greenballImage.x = 50;
+  greenballImage.y = 100;
+  redballImage.x = 450;
+  redballImage.y = 100;
+  blueballImage.x = 850;
+  blueballImage.y = 100;
 }
 
 
@@ -58,9 +65,9 @@ function draw() {
   }
 
   imageMode(CENTER);
-  image(greenballImage,50,100,100,100);
-  image(redballImage,450,100,100,100);
-  image(blueballImage,850,100,100,100);
+  image(greenballImage,greenballImage.x,greenballImage.y,100,100);
+  image(redballImage,redballImage.x,redballImage.y,100,100);
+  image(blueballImage,blueballImage.x,blueballImage.y,100,100);
 }
 
 //display title
@@ -74,27 +81,30 @@ function title() {
 }
 
 function simulation() {
-  handleInput();
-  move();
-  checkOverlap();
 }
 
 function mousePressed() {
-  currentClue = random(clues);
-  responsiveVoice.speak(currentClue);
+  if (state === 'title') {
+    state = 'simulation'
+    currentClue = random(clues);
+    responsiveVoice.speak(currentClue);
+  }
+  else if (state === 'simulation') {
+    clicked();
+  }
 }
 
 function clicked() {
-  let d = dist(blueballImage.x,blueballImage.y,mouse.x,mouse.y);
-  if (currentClue = "I spy something blue" && d < 50) {
-    console.log(hit);
+  let d = dist(blueballImage.x,blueballImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something blue" && d < 50) {
+    responsiveVoice.speak('that is correct');
   }
-  let d = dist(redballImage.x,redballImage.y,mouse.x,mouse.y);
-  if (currentClue = "I spy something red" && d < 50) {
-    console.log(hit);
+   d = dist(redballImage.x,redballImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something red" && d < 50) {
+    responsiveVoice.speak('you got it');
   }
-  let d = dist(greenballImage.x,greenballImage.y,mouse.x,mouse.y);
-  if (currentClue = "I spy something green" && d < 50) {
-    console.log(hit);
+   d = dist(greenballImage.x,greenballImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something green" && d < 50) {
+    responsiveVoice.speak('well done');
   }
 }
