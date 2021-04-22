@@ -129,12 +129,74 @@ function preload() {
 function setup() {
   createCanvas(1250,600);
 
-  greenballImage.x = 50;
-  greenballImage.y = 100;
-  redballImage.x = 450;
-  redballImage.y = 100;
-  blueballImage.x = 850;
-  blueballImage.y = 100;
+  coldImage.x = 475;
+  coldImage.y = 100;
+  alexaImage.x = 525;
+  alexaImage.y = 100;
+  bedImage.x = 575;
+  bedImage.y = 100;
+  bodyofwaterImage.x = 625;
+  bodyofwaterImage.y = 100;
+  candleImage.x = 675;
+  candleImage.y = 100;
+  clockImage.x = 725;
+  clockImage.y = 100;
+  clownImage.x = 775;
+  clownImage.y = 100;
+  tongueImage.x = 825;
+  tongueImage.y = 100;
+
+  combImage.x = 475;
+  combImage.y = 150;
+  computerkeysImage.x = 525;
+  computerkeysImage.y = 150;
+  diceImage.x = 575;
+  diceImage.y = 150;
+  eggImage.x = 625;
+  eggImage.y = 150;
+  envelopeImage.x = 675;
+  envelopeImage.y = 150;
+  fenceImage.x = 725;
+  fenceImage.y = 150;
+  fireImage.x = 775;
+  fireImage.y = 150;
+  footstepsImage.x = 825;
+  footstepsImage.y = 150;
+
+  garbagetruckImage.x = 475;
+  garbagetruckImage.y = 200;
+  hammerImage.x = 525;
+  hammerImage.y = 200;
+  lettuceImage.x = 575;
+  lettuceImage.y = 200;
+  magnetImage.x = 625;
+  magnetImage.y = 200;
+  moonImage.x = 675;
+  moonImage.y = 200;
+  mugImage.x = 725;
+  mugImage.y = 200;
+  pippinImage.x = 775;
+  pippinImage.y = 200;
+  pennyImage.x = 825;
+  pennyImage.y = 200;
+
+  potatoImage.x = 475;
+  potatoImage.y = 250;
+  rubberbandImage.x = 525;
+  rubberbandImage.y = 250;
+  screwdriversImage.x = 575;
+  screwdriversImage.y = 250;
+  skyImage.x = 625;
+  skyImage.y = 250;
+  spongeImage.x = 675;
+  spongeImage.y = 250;
+  tridentImage.x = 725;
+  tridentImage.y = 250;
+  waterImage.x = 775;
+  waterImage.y = 250;
+  windImage.x = 825;
+  windImage.y = 250;
+
 }
 
 
