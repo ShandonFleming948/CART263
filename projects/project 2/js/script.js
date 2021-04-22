@@ -1,10 +1,10 @@
 /**
-Project 2 Prototype (I Spy)
+Project 2 (I Spy)
 Shandon Fleming
 
-The code below displays a pototyype for my second project. It runs a simple I SPY game
+The code below displays my second project. It runs a simple I SPY game
 in which the computer gives the user a clue and the user interacts with the game by
-using the mouse
+using the mouse.
 */
 
 
@@ -21,10 +21,40 @@ let currentClue = ``;
 
 let state = `title`; //can be title, simulation, win, lose
 
-//variables for the three images
-let greenballImage;
-let redballImage;
-let blueballImage;
+//variables for the images
+let coldImage;
+let alexaImage;
+let bedImage;
+let bodyofwaterImage;
+let candleImage;
+let clockImage;
+let clownImage;
+let tongueImage;
+let combImage;
+let computerkeysImage;
+let diceImage;
+let eggImage;
+let envelopeImage;
+let fenceImage;
+let fireImage;
+let footstepsImage;
+let garbagetruckImage;
+let hammerImage;
+let lettuceImage;
+let magnetImage;
+let moonImage;
+let mugImage;
+let pennyImage;
+let pippinImage;
+let potatoImage;
+let rubberbandImage;
+let screwdriversImage;
+let skyImage;
+let spongeImage;
+let tridentImage;
+let waterImage;
+let windImage;
+
 
 //the instructions for the game are displayed in an alert
 alert("Once you click the ok button, click anywhere on the screen to get your first clue.");
