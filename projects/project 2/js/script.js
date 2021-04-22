@@ -90,9 +90,38 @@ alert("Once you click the ok button, click anywhere on the screen to get your fi
 
 //loads the images
 function preload() {
-  greenballImage = loadImage("assets/images/greenball.jpg");
-  redballImage = loadImage("assets/images/redball.png");
-  blueballImage = loadImage("assets/images/blueball.jpg");
+  coldImage = loadImage("assets/images/a-cold.jpg");
+  alexaImage = loadImage("assets/images/alexa.jpg");
+  bedImage = loadImage("assets/images/bed.jpg");
+  bodyofwaterImage = loadImage("assets/images/body-of-water.jpg");
+  candleImage = loadImage("assets/images/candle.jpg");
+  clockImage = loadImage("assets/images/Clock.jpg");
+  clownImage = loadImage("assets/images/clown.png");
+  tongueImage = loadImage("assets/images/tongue.webp");
+  combImage = loadImage("assets/images/comb.webp");
+  computerkeysImage = loadImage("assets/images/computer-keys.jpg");
+  diceImage = loadImage("assets/images/dice.jpg");
+  eggImage = loadImage("assets/images/egg.jpg");
+  envelopeImage = loadImage("assets/images/envelope.jpg");
+  fenceImage = loadImage("assets/images/fence.jpg");
+  fireImage = loadImage("assets/images/fire.jpg");
+  footstepsImage = loadImage("assets/images/footsteps.jpg");
+  garbagetruckImage = loadImage("assets/images/garbage-truck.jpg");
+  hammerImage = loadImage("assets/images/hammer.jpg");
+  lettuceImage = loadImage("assets/images/lettuce.jpg");
+  magnetImage = loadImage("assets/images/magnet.jpg");
+  moonImage = loadImage("assets/images/moon.jpg");
+  mugImage = loadImage("assets/images/mug.jpg");
+  pennyImage = loadImage("assets/images/penny.jpg");
+  pippinImage = loadImage("assets/images/Pippin.jpg");
+  potatoImage = loadImage("assets/images/potato.jpg");
+  rubberbandImage = loadImage("assets/images/rubber-band.jpg");
+  screwdriversImage = loadImage("assets/images/screwdrivers.jpg");
+  skyImage = loadImage("assets/images/sky.jpg");
+  spongeImage = loadImage("assets/images/sponge.png");
+  tridentImage = loadImage("assets/images/trident.jpg");
+  waterImage = loadImage("assets/images/water.jpg");
+  windImage = loadImage("assets/images/water.jpg");
 }
 
 
