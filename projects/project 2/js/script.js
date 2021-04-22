@@ -196,7 +196,6 @@ function setup() {
   waterImage.y = 250;
   windImage.x = 825;
   windImage.y = 250;
-
 }
 
 
@@ -212,9 +211,39 @@ function draw() {
   }
 
   imageMode(CENTER);
-  image(greenballImage,greenballImage.x,greenballImage.y,100,100);
-  image(redballImage,redballImage.x,redballImage.y,100,100);
-  image(blueballImage,blueballImage.x,blueballImage.y,100,100);
+  image(coldImage,coldImage.x,coldImage.y,50,50);
+  image(alexaImage,alexaImage.x,alexaImage.y,50,50);
+  image(bedImage,bedImage.x,bedImage.y,50,50);
+  image(bodyofwaterImage,bodyofwaterImage.x,bodyofwaterImage.y,50,50);
+  image(candleImage,candleImage.x,candleImage.y,50,50);
+  image(clockImage,clockImage.x,clockImage.y,50,50);
+  image(clownImage,clownImage.x,clownImage.y,50,50);
+  image(tongueImage,tongueImage.x,tongueImage.y,50,50);
+  image(combImage,combImage.x,combImage.y,50,50);
+  image(computerkeysImage,computerkeysImage.x,computerkeysImage.y,50,50);
+  image(diceImage,diceImage.x,diceImage.y,50,50);
+  image(eggImage,eggImage.x,eggImage.y,50,50);
+  image(envelopeImage,envelopeImage.x,envelopeImage.y,50,50);
+  image(fenceImage,fenceImage.x,fenceImage.y,50,50);
+  image(fireImage,fireImage.x,fireImage.y,50,50);
+  image(footstepsImage,footstepsImage.x,footstepsImage.y,50,50);
+  image(garbagetruckImage,garbagetruckImage.x,garbagetruckImage.y,50,50);
+  image(hammerImage,hammerImage.x,hammerImage.y,50,50);
+  image(lettuceImage,lettuceImage.x,lettuceImage.y,50,50);
+  image(magnetImage,magnetImage.x,magnetImage.y,50,50);
+  image(moonImage,moonImage.x,moonImage.y,50,50);
+  image(mugImage,mugImage.x,mugImage.y,50,50);
+  image(pippinImage,pippinImage.x,pippinImage.y,50,50);
+  image(pennyImage,pennyImage.x,pennyImage.y,50,50);
+  image(potatoImage,potatoImage.x,potatoImage.y,50,50);
+  image(rubberbandImage,rubberbandImage.x,rubberbandImage.y,50,50);
+  image(screwdriversImage,screwdriversImage.x,screwdriversImage.y,50,50);
+  image(skyImage,skyImage.x,skyImage.y,50,50);
+  image(spongeImage,spongeImage.x,spongeImage.y,50,50);
+  image(tridentImage,tridentImage.x,tridentImage.y,50,50);
+  image(waterImage,waterImage.x,waterImage.y,50,50);
+  image(windImage,windImage.x,windImage.y,50,50);
+
 }
 
 //display title
