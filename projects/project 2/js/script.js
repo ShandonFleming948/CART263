@@ -274,16 +274,113 @@ function mousePressed() {
 
 //checks to see if the user clicked the correct image
 function clicked() {
-  let d = dist(blueballImage.x,blueballImage.y,mouseX,mouseY);
-  if (currentClue === "I spy something blue" && d < 50) {
+  let d = dist(screwdriversImage.x,screwdriversImage.y,mouseX,mouseY);
+  if (currentClue === "I spy some drivers that cannot drive any vehicles" && d < 50) {
     responsiveVoice.speak('that is correct');
   }
-   d = dist(redballImage.x,redballImage.y,mouseX,mouseY);
-  if (currentClue === "I spy something red" && d < 50) {
+   d = dist(computerkeysImage.x,computerkeysImage.y,mouseX,mouseY);
+  if (currentClue === "I spy a set of keys" && d < 50) {
     responsiveVoice.speak('you got it');
   }
-   d = dist(greenballImage.x,greenballImage.y,mouseX,mouseY);
-  if (currentClue === "I spy something green" && d < 50) {
+   d = dist(waterImage.x,waterImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that can be a solid, a liquid, and a gas" && d < 50) {
     responsiveVoice.speak('well done');
   }
+   d = dist(magnetImage.x,magnetImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that can stick to things without glue" && d < 50) {
+   responsiveVoice.speak('well done');
+  }
+   d = dist(moonImage.x,moonImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that can affect the weather" && d < 50) {
+    responsiveVoice.speak('well done');
+  }
+   d = dist(tridentImage.x,tridentImage.y,mouseX,mouseY);
+  if (currentClue === "I spy the weapon of Poseidon" && d < 50) {
+   responsiveVoice.speak('well done');
+  }
+   d = dist(hammerImage.x,hammerImage.y,mouseX,mouseY);
+  if (currentClue === "I spy a hammer" && d < 50) {
+   responsiveVoice.speak('well done');
+  }
+   d = dist(pippinImage.x,pippinImage.y,mouseX,mouseY);
+  if (currentClue === "I spy... Pippin" && d < 50) {
+    responsiveVoice.speak('well done');
+  }
+   d = dist(mugImage.x,mugImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that can hold things whilst being held" && d < 50) {
+    responsiveVoice.speak('well done');
+  }
+   d = dist(bodyofwaterImage.x,bodyofwaterImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that everyone can divide, but no one can see where it has been divided" && d < 50) {
+    responsiveVoice.speak('you got it');
+  }
+   d = dist(candleImage.x,candleImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that is tall when it is young and short when it is old" && d < 50) {
+    responsiveVoice.speak('well done');
+  }
+   d = dist(footstepsImage.x,footstepsImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that you leave behind more of when you take more of them" && d < 50) {
+    responsiveVoice.speak('well done');
+  }
+   d = dist(pennyImage.x,pennyImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that has a head, a tail, is brown, and has no legs" && d < 50) {
+    responsiveVoice.speak('well done');
+  }
+   d = dist(diceImage.x,diceImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that has six faces but does not wear makeup" && d < 50) {
+   responsiveVoice.speak('well done');
+  }
+   d = dist(fenceImage.x,fenceImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that runs around the whole yard without moving" && d < 50) {
+   responsiveVoice.speak('well done');
+  }
+   d = dist(fireImage.x,fireImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that doesn’t have lungs but needs air" && d < 50) {
+    responsiveVoice.speak('well done');
+  }
+   d = dist(coldImage.x,coldImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that you can catch but never throw" && d < 50) {
+    responsiveVoice.speak('well done');
+  }
+   d = dist(skyImage.x,skyImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that you can see everyday but cannot touch" && d < 50) {
+    responsiveVoice.speak('you got it');
+  }
+   d = dist(windImage.x,windImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that you can feel but cannot see" && d < 50) {
+    responsiveVoice.speak('well done');
+  }
+   d = dist(eggImage.x,eggImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that is more useful when it is broken" && d < 50) {
+    responsiveVoice.speak('well done');
+  }
+   d = dist(bedImage.x,bedImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that has one head, one foot, and four legs" && d < 50) {
+    responsiveVoice.speak('well done');
+  }
+   d = dist(rubberbandImage.x,rubberbandImage.y,mouseX,mouseY);
+  if (currentClue === "I spy a band that can never play music" && d < 50) {
+    responsiveVoice.speak('well done');
+  }
+   d = dist(clockImage.x,clockImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that has hands but cannot clap" && d < 50) {
+    responsiveVoice.speak('well done');
+  }
+   d = dist(combImage.x,combImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that has many teeth but no jaws" && d < 50) {
+    responsiveVoice.speak('well done');
+  }
+   d = dist(tongueImage.x,tongueImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that tastes better than it smells" && d < 50) {
+    responsiveVoice.speak('well done');
+  }
+   d = dist(garbagetruckImage.x,garbagetruckImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that has four wheels and flies" && d < 50) {
+    responsiveVoice.speak('you got it');
+  }
+   d = dist(envelopeImage.x,envelopeImage.y,mouseX,mouseY);
+  if (currentClue === "I spy something that begins with e and only contains one letter" && d < 50) {
+    responsiveVoice.speak('well done');
+  }
+
 }

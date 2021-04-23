@@ -26,6 +26,10 @@ let greenballImage;
 let redballImage;
 let blueballImage;
 
+let score = 0;
+
+let timer = undefined;
+
 //the instructions for the game are displayed in an alert
 alert("Once you click the ok button, click anywhere on the screen to get your first clue.");
 
@@ -80,32 +84,54 @@ function title() {
 
 //run the game
 function simulation() {
+  push();
+  textSize(20);
+  fill(3, 223, 252);
+  textAlign(CENTER,CENTER);
+  text(`Score: ${score}`,width/2,height/2);
+  text(`Timer: ${ceil(timer / 60)}`,width/2,height/2 + 50);
+  pop();
+  timer = timer - 1;
+  if (timer === 0) {
+    state = 'game over'
+  }
 }
 
 //pressing the mouse cycles through the states and triggers responsivevoice
 function mousePressed() {
   if (state === 'title') {
     state = 'simulation'
-    currentClue = random(clues);
-    responsiveVoice.speak(currentClue);
+    newRound()
   }
   else if (state === 'simulation') {
     clicked();
   }
 }
 
-//checks to see if the user clicked the correct image 
+function newRound() {
+  currentClue = random(clues);
+  responsiveVoice.speak(currentClue);
+  timer = 10 * 60;
+}
+
+//checks to see if the user clicked the correct image
 function clicked() {
   let d = dist(blueballImage.x,blueballImage.y,mouseX,mouseY);
   if (currentClue === "I spy something blue" && d < 50) {
     responsiveVoice.speak('that is correct');
+    score = score + 1;
+    newRound()
   }
    d = dist(redballImage.x,redballImage.y,mouseX,mouseY);
   if (currentClue === "I spy something red" && d < 50) {
     responsiveVoice.speak('you got it');
+    score = score + 1;
+    newRound()
   }
    d = dist(greenballImage.x,greenballImage.y,mouseX,mouseY);
   if (currentClue === "I spy something green" && d < 50) {
     responsiveVoice.speak('well done');
+    score = score + 1;
+    newRound()
   }
 }
