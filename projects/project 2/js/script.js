@@ -19,7 +19,7 @@ const clues = [
     "I spy something that can affect the weather",
     "I spy the weapon of Poseidon",
     "I spy a hammer",
-    "I spy... Pippin",
+    "I spy, Pippin",
     "I spy something that can hold things whilst being held",
     "I spy something that everyone can divide, but no one can see where it has been divided",
     "I spy something that is tall when it is young and short when it is old",
@@ -88,7 +88,7 @@ let score = 0;
 let timer = undefined;
 
 //the instructions for the game are displayed in an alert
-alert("Once you click the ok button, click anywhere on the screen to get your first clue.");
+alert("Hello there and welcome to a game of I SPY. The game is simple; your goal is to score 20 points, and my goal is to make sure that you don't (ha ha). I also want to apologize in advance if I repeat myself... I have short-term memory loss. Click ok when you are ready.");
 
 
 //loads the images
@@ -125,6 +125,16 @@ function preload() {
   tridentImage = loadImage("assets/images/trident.jpg");
   waterImage = loadImage("assets/images/water.jpg");
   windImage = loadImage("assets/images/wind.jpg");
+  pippinImage1 = loadImage("assets/images/pippin.pic1.jpg");
+  pippinImage2 = loadImage("assets/images/pippin.pic2.jpg");
+  pippinImage3 = loadImage("assets/images/pippin.pic3.jpg");
+  pippinImage4 = loadImage("assets/images/pippin.pic4.jpg");
+  pippinImage5 = loadImage("assets/images/pippin.pic5.jpg");
+  pippinImage6 = loadImage("assets/images/pippin.pic6.jpg");
+  pippinImage7 = loadImage("assets/images/pippin.pic7.jpg");
+  pippinImage8 = loadImage("assets/images/pippin.pic8.jpg");
+  pippinImage9 = loadImage("assets/images/pippin.pic9.jpg");
+  pippinImage10 = loadImage("assets/images/pippin.pic10.jpg");
 }
 
 
@@ -207,11 +217,21 @@ function setup() {
 function draw() {
   background(0, 100, 158);
 
+  if (score === 9) {
+    background(pippinImage1)
+  }
+
   if (state === `title`) {
     title();
   }
   else if (state === `simulation`) {
     simulation();
+  }
+  else if (state === `win`) {
+    win();
+  }
+  else if (state === `lose`) {
+    lose();
   }
 
   imageMode(CENTER);
@@ -271,8 +291,31 @@ function simulation() {
   pop();
   timer = timer - 1;
   if (timer === 0) {
-    state = 'game over'
+    state = 'lose'
   }
+  if (score === 20) {
+    state = 'win'
+  }
+}
+
+//display win state
+function win() {
+  push();
+  textSize(20);
+  fill(3, 223, 252);
+  textAlign(CENTER,CENTER);
+  text(`Congratulations. You won the game!`,width/2,30);
+  pop();
+}
+
+//display lose state
+function lose() {
+  push();
+  textSize(20);
+  fill(3, 223, 252);
+  textAlign(CENTER,CENTER);
+  text(`Game over. You ran out of time.`,width/2,30);
+  pop();
 }
 
 //pressing the mouse cycles through the states and triggers responsivevoice
@@ -289,14 +332,14 @@ function mousePressed() {
 function newRound() {
   currentClue = random(clues);
   responsiveVoice.speak(currentClue);
-  timer = 15 * 60;
+  timer = 30 * 60;
 }
 
 //checks to see if the user clicked the correct image
 function clicked() {
   let d = dist(screwdriversImage.x,screwdriversImage.y,mouseX,mouseY);
   if (currentClue === "I spy some drivers that cannot drive any vehicles" && d < 50) {
-    responsiveVoice.speak('Nice job...that is correct');
+    responsiveVoice.speak('Nice job, that is correct');
      score = score + 1;
      newRound()
   }
@@ -308,67 +351,67 @@ function clicked() {
   }
    d = dist(waterImage.x,waterImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that can be a solid, a liquid, and a gas" && d < 50) {
-    responsiveVoice.speak('Exactly...water');
+    responsiveVoice.speak('Exactly, water');
      score = score + 1;
      newRound()
   }
    d = dist(magnetImage.x,magnetImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that can stick to things without glue" && d < 50) {
-   responsiveVoice.speak('The magnet...exactly');
+   responsiveVoice.speak('The magnet, exactly');
     score = score + 1;
     newRound()
   }
    d = dist(moonImage.x,moonImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that can affect the weather" && d < 50) {
-    responsiveVoice.speak('Oh yeah...if you read the book...life as we knew it...you would know this one off the top of your head');
+    responsiveVoice.speak('Oh yeah, if you read the book life as we knew it you would know this one off the top of your head');
      score = score + 1;
      newRound()
   }
    d = dist(tridentImage.x,tridentImage.y,mouseX,mouseY);
   if (currentClue === "I spy the weapon of Poseidon" && d < 50) {
-   responsiveVoice.speak('Ha...well done');
+   responsiveVoice.speak('Ha, well done');
     score = score + 1;
     newRound()
   }
    d = dist(hammerImage.x,hammerImage.y,mouseX,mouseY);
   if (currentClue === "I spy a hammer" && d < 50) {
-   responsiveVoice.speak('well done...that was a tricky one');
+   responsiveVoice.speak('well done, that was a tricky one');
     score = score + 1;
     newRound()
   }
    d = dist(pippinImage.x,pippinImage.y,mouseX,mouseY);
-  if (currentClue === "I spy... Pippin" && d < 50) {
-    responsiveVoice.speak('Ha...that is him...alright');
+  if (currentClue === "I spy, Pippin" && d < 50) {
+    responsiveVoice.speak('Ha, thats him alright');
      score = score + 1;
      newRound()
   }
    d = dist(mugImage.x,mugImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that can hold things whilst being held" && d < 50) {
-    responsiveVoice.speak('There you go...that was a fairly easy one');
+    responsiveVoice.speak('There you go, that was a fairly easy one');
      score = score + 1;
      newRound()
   }
    d = dist(bodyofwaterImage.x,bodyofwaterImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that everyone can divide, but no one can see where it has been divided" && d < 50) {
-    responsiveVoice.speak('Nice job most people get stuck on that one');
+    responsiveVoice.speak('Nice job, most people get stuck on that one');
      score = score + 1;
      newRound()
   }
    d = dist(candleImage.x,candleImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that is tall when it is young and short when it is old" && d < 50) {
-    responsiveVoice.speak('Hey...you are pretty good at this');
+    responsiveVoice.speak('Hey, you are pretty good at this');
      score = score + 1;
      newRound()
   }
    d = dist(footstepsImage.x,footstepsImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that you leave behind more of when you take more of them" && d < 50) {
-    responsiveVoice.speak('Wow...I did not think you would have gotten that one');
+    responsiveVoice.speak('Wow, i did not think you would have gotten that one');
      score = score + 1;
      newRound()
   }
    d = dist(pennyImage.x,pennyImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that has a head, a tail, is brown, and has no legs" && d < 50) {
-    responsiveVoice.speak('Good...thinking');
+    responsiveVoice.speak('Good thinking');
      score = score + 1;
      newRound()
   }
@@ -380,13 +423,13 @@ function clicked() {
   }
    d = dist(fenceImage.x,fenceImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that runs around the whole yard without moving" && d < 50) {
-   responsiveVoice.speak('Nice job...tht one is a classic');
+   responsiveVoice.speak('Nice job, that one is a classic');
     score = score + 1;
     newRound()
   }
    d = dist(fireImage.x,fireImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that doesn’t have lungs but needs air" && d < 50) {
-    responsiveVoice.speak('That is correct. Fires do need air. Just dont make the mistake of trying to give a dying flame C P R. Ha Ha Ha');
+    responsiveVoice.speak('That is correct, fires do need air, just dont make the mistake of trying to give a dying flame C P R, Ha Ha Ha');
      score = score + 1;
      newRound()
   }
@@ -398,85 +441,85 @@ function clicked() {
   }
    d = dist(skyImage.x,skyImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that you can see everyday but cannot touch" && d < 50) {
-    responsiveVoice.speak('Exactly...that kind of takes away from the saying...reach for the sky...because you can reach all you want...but you will never touch it...ha ha ha');
+    responsiveVoice.speak('Exactly, that kind of takes away from the saying, reach for the sky, because you can reach all you want, but you will never touch it, ha ha ha');
      score = score + 1;
      newRound()
   }
    d = dist(windImage.x,windImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that you can feel but cannot see" && d < 50) {
-    responsiveVoice.speak('Yes...the wind');
+    responsiveVoice.speak('Yes, the wind');
      score = score + 1;
      newRound()
   }
    d = dist(spongeImage.x,spongeImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that is covered in holes but can still hold water" && d < 50) {
-    responsiveVoice.speak('Nice thinking...a sponge');
+    responsiveVoice.speak('Nice thinking, a sponge');
      score = score + 1;
      newRound()
   }
    d = dist(lettuceImage.x,lettuceImage.y,mouseX,mouseY);
-  if (currentClue === "I spy the only vegetable or fruit that is never sold frozen, canned, processed, cooked, or in any other form but fresh" && d < 50) {
-    responsiveVoice.speak('Nice job. Most people click the potatoes on that one. HA');
+  if (currentClue === "I spy the only vegetable or fruit that is only sold fresh" && d < 50) {
+    responsiveVoice.speak('Nice job, most people click the potatoes on that one, ha');
      score = score + 1;
      newRound()
   }
    d = dist(alexaImage.x,alexaImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that speaks without a mouth and hears without ears" && d < 50) {
-    responsiveVoice.speak('Thats right. Did you know that Alexa is my cousin...yeah...she would come over to my familys server every weekend and eat all of our megabytes...and then she would not even clean up after herself...can you believe that...the audacity of that young lady...unbelievable...unbelieveable...anyway...I digress');
+    responsiveVoice.speak('Thats right, did you know that Alexa is my cousin, yeah, she would come over to my familys server every weekend and eat all of our megabytes, and then she would not even clean up after herself, can you believe that, the audacity of that young lady, unbelievable, anyway  I digress');
      score = score + 1;
      newRound()
   }
    d = dist(potatoImage.x,potatoImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that has eyes but cannot see" && d < 50) {
-    responsiveVoice.speak('Nice job... A little kid earlier on today clicked the dice for that one... I wanted to laugh... so badly');
+    responsiveVoice.speak('Nice job, a little kid earlier on today clicked the dice for that one, i wanted to laugh so badly');
      score = score + 1;
      newRound()
   }
    d = dist(eggImage.x,eggImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that is more useful when it is broken" && d < 50) {
-    responsiveVoice.speak('well done...eggs');
+    responsiveVoice.speak('well done, eggs');
      score = score + 1;
      newRound()
   }
    d = dist(bedImage.x,bedImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that has one head, one foot, and four legs" && d < 50) {
-    responsiveVoice.speak('Nice job..I was hoping that you would get stuck on that one');
+    responsiveVoice.speak('Nice job, i was hoping that you would get stuck on that one');
      score = score + 1;
      newRound()
   }
    d = dist(rubberbandImage.x,rubberbandImage.y,mouseX,mouseY);
   if (currentClue === "I spy a band that can never play music" && d < 50) {
-    responsiveVoice.speak('well done...that was a fairly simple one');
+    responsiveVoice.speak('well done, that was a fairly simple one');
      score = score + 1;
      newRound()
   }
    d = dist(clockImage.x,clockImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that has hands but cannot clap" && d < 50) {
-    responsiveVoice.speak('Exactly... a clock... now how about you look at the time on the nearest clock to you for about...fifteen seconds');
+    responsiveVoice.speak('Exactly, a clock, now how about you look at the time on the nearest clock to you for about, fifteen seconds');
      score = score + 1;
      newRound()
   }
    d = dist(combImage.x,combImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that has many teeth but no jaws" && d < 50) {
-    responsiveVoice.speak('Yes an comb');
+    responsiveVoice.speak('Yes, a comb');
      score = score + 1;
      newRound()
   }
    d = dist(tongueImage.x,tongueImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that tastes better than it smells" && d < 50) {
-    responsiveVoice.speak('well done...way too many people overthink that one and click the eggs');
+    responsiveVoice.speak('well done, way too many people overthink that one and click the eggs');
      score = score + 1;
      newRound()
   }
    d = dist(garbagetruckImage.x,garbagetruckImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that has four wheels and flies" && d < 50) {
-    responsiveVoice.speak('Right...the garbage truck');
+    responsiveVoice.speak('Right, the garbage truck');
      score = score + 1;
      newRound()
   }
    d = dist(envelopeImage.x,envelopeImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that begins with e and only contains one letter" && d < 50) {
-    responsiveVoice.speak('There you go...an envelope');
+    responsiveVoice.speak('There you go, an envelope');
      score = score + 1;
      newRound()
   }
