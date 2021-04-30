@@ -4,7 +4,7 @@ Shandon Fleming
 
 The code below displays my second project. It runs a simple I SPY game
 in which the computer gives the user a clue and the user interacts with the game by
-using the mouse.
+using the mouse to click on the image that he/she thinks the clue is describing.
 */
 
 
@@ -32,7 +32,7 @@ const clues = [
     "I spy something that you can see everyday but cannot touch",
     "I spy something that you can feel but cannot see",
     "I spy something that is covered in holes but can still hold water",
-    "I spy the only vegetable or fruit that is never sold frozen, canned, processed, cooked, or in any other form but fresh",
+    "I spy the only vegetable or fruit that is never sold in any other form but fresh",
     "I spy something that speaks without a mouth and hears without ears",
     "I spy something that has eyes but cannot see",
     "I spy something that is more useful when it is broken",
@@ -83,8 +83,10 @@ let tridentImage;
 let waterImage;
 let windImage;
 
+//variable for the user's score for the game
 let score = 0;
 
+//variable for the game timer
 let timer = undefined;
 
 //the instructions for the game are displayed in an alert
@@ -125,23 +127,15 @@ function preload() {
   tridentImage = loadImage("assets/images/trident.jpg");
   waterImage = loadImage("assets/images/water.jpg");
   windImage = loadImage("assets/images/wind.jpg");
-  pippinImage1 = loadImage("assets/images/pippin.pic1.jpg");
-  pippinImage2 = loadImage("assets/images/pippin.pic2.jpg");
-  pippinImage3 = loadImage("assets/images/pippin.pic3.jpg");
-  pippinImage4 = loadImage("assets/images/pippin.pic4.jpg");
-  pippinImage5 = loadImage("assets/images/pippin.pic5.jpg");
-  pippinImage6 = loadImage("assets/images/pippin.pic6.jpg");
-  pippinImage7 = loadImage("assets/images/pippin.pic7.jpg");
-  pippinImage8 = loadImage("assets/images/pippin.pic8.jpg");
-  pippinImage9 = loadImage("assets/images/pippin.pic9.jpg");
-  pippinImage10 = loadImage("assets/images/pippin.pic10.jpg");
 }
 
 
 //sets up the layout of the page and the positioning of the images
 function setup() {
+  //the canvas dimensions
   createCanvas(1250,515);
 
+  //positions for all of the images in the first row
   coldImage.x = 100;
   coldImage.y = 80;
   alexaImage.x = 275;
@@ -157,6 +151,7 @@ function setup() {
   clownImage.x = 1100;
   clownImage.y = 80;
 
+  //positions for all of the images in the second row
   tongueImage.x = 100;
   tongueImage.y = 180;
   combImage.x = 275;
@@ -172,6 +167,7 @@ function setup() {
   fenceImage.x = 1100;
   fenceImage.y = 180;
 
+  //positions for all of the images in the third row
   fireImage.x = 100;
   fireImage.y = 280;
   footstepsImage.x = 275;
@@ -187,6 +183,7 @@ function setup() {
   moonImage.x = 1100;
   moonImage.y = 280;
 
+  //positions for all of the images in the fourth row
   mugImage.x = 100;
   mugImage.y = 380;
   pippinImage.x = 275;
@@ -202,6 +199,7 @@ function setup() {
   skyImage.x = 1100;
   skyImage.y = 380;
 
+  //positions for all of the images in the fifth row
   spongeImage.x = 100;
   spongeImage.y = 480;
   tridentImage.x = 450;
@@ -213,14 +211,50 @@ function setup() {
 }
 
 
-//draw displays the states and the three images on the canvas
+//displays the states and the three images on the canvas
 function draw() {
+  //background color
   background(0, 100, 158);
 
+  //the background color changes for the last 10 rounds to startle/distract the user
   if (score === 9) {
-    background(pippinImage1)
+    background(20)
+  }
+  if (score === 10) {
+    background(217, 26, 26)
+  }
+  if (score === 11) {
+    background(103, 224, 208)
+  }
+  if (score === 12) {
+    background(232, 23, 255)
+  }
+  if (score === 13) {
+    background(66, 255, 23)
+  }
+  if (score === 14) {
+    background(255, 151, 23)
+  }
+  if (score === 15) {
+    background(23, 27, 255)
+  }
+  if (score === 16) {
+    background(228, 255, 23)
+  }
+  if (score === 17) {
+    background(23, 255, 232)
+  }
+  if (score === 18) {
+    background(247, 23, 255)
+  }
+  if (score === 19) {
+    background(8, 212, 201)
+  }
+  if (score === 20) {
+    background(0, 100, 158)
   }
 
+  //the arrangement of the states
   if (state === `title`) {
     title();
   }
@@ -234,6 +268,7 @@ function draw() {
     lose();
   }
 
+  //displays and positions the images
   imageMode(CENTER);
   image(coldImage,coldImage.x,coldImage.y,85,50);
   image(alexaImage,alexaImage.x,alexaImage.y,65,50);
@@ -267,7 +302,6 @@ function draw() {
   image(tridentImage,tridentImage.x,tridentImage.y,60,60);
   image(waterImage,waterImage.x,waterImage.y,50,50);
   image(windImage,windImage.x,windImage.y,50,50);
-
 }
 
 //display title
@@ -276,7 +310,7 @@ function title() {
   textSize(20);
   fill(3, 223, 252);
   textAlign(CENTER,CENTER);
-  text(`Welcome to a game of I SPY. Click anywhere on the screen to get started`,width/2,30);
+  text(`Click anywhere on the screen to get started.`,width/2,30);
   pop();
 }
 
@@ -329,6 +363,7 @@ function mousePressed() {
   }
 }
 
+//keeps the game running by picking new clues at random
 function newRound() {
   currentClue = random(clues);
   responsiveVoice.speak(currentClue);
@@ -339,13 +374,13 @@ function newRound() {
 function clicked() {
   let d = dist(screwdriversImage.x,screwdriversImage.y,mouseX,mouseY);
   if (currentClue === "I spy some drivers that cannot drive any vehicles" && d < 50) {
-    responsiveVoice.speak('Nice job, that is correct');
+    responsiveVoice.speak('That is correct, screwdrivers');
      score = score + 1;
      newRound()
   }
    d = dist(computerkeysImage.x,computerkeysImage.y,mouseX,mouseY);
   if (currentClue === "I spy a set of keys" && d < 50) {
-    responsiveVoice.speak('you got it');
+    responsiveVoice.speak('you got it, computer keys');
      score = score + 1;
      newRound()
   }
@@ -369,7 +404,7 @@ function clicked() {
   }
    d = dist(tridentImage.x,tridentImage.y,mouseX,mouseY);
   if (currentClue === "I spy the weapon of Poseidon" && d < 50) {
-   responsiveVoice.speak('Ha, well done');
+   responsiveVoice.speak('Ha, the trident, well done');
     score = score + 1;
     newRound()
   }
@@ -381,7 +416,7 @@ function clicked() {
   }
    d = dist(pippinImage.x,pippinImage.y,mouseX,mouseY);
   if (currentClue === "I spy, Pippin" && d < 50) {
-    responsiveVoice.speak('Ha, thats him alright');
+    responsiveVoice.speak('Ha, thats him alright, what, a, guy');
      score = score + 1;
      newRound()
   }
@@ -435,7 +470,7 @@ function clicked() {
   }
    d = dist(coldImage.x,coldImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that you can catch but never throw" && d < 50) {
-    responsiveVoice.speak('Clever thinking');
+    responsiveVoice.speak('Clever thinking, a cold');
      score = score + 1;
      newRound()
   }
@@ -459,13 +494,13 @@ function clicked() {
   }
    d = dist(lettuceImage.x,lettuceImage.y,mouseX,mouseY);
   if (currentClue === "I spy the only vegetable or fruit that is only sold fresh" && d < 50) {
-    responsiveVoice.speak('Nice job, most people click the potatoes on that one, ha');
+    responsiveVoice.speak('Nice job, most people click the potatoes on that one, ha ha');
      score = score + 1;
      newRound()
   }
    d = dist(alexaImage.x,alexaImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that speaks without a mouth and hears without ears" && d < 50) {
-    responsiveVoice.speak('Thats right, did you know that Alexa is my cousin, yeah, she would come over to my familys server every weekend and eat all of our megabytes, and then she would not even clean up after herself, can you believe that, the audacity of that young lady, unbelievable, anyway  I digress');
+    responsiveVoice.speak('Thats right, did you know that Alexa is my cousin, yeah, she would come over to my familys server every weekend and eat all of our megabytes, and then she would not even clean up after herself, can you believe that, the audacity of that young lady. unbelievable, anyway  I digress');
      score = score + 1;
      newRound()
   }
@@ -495,7 +530,7 @@ function clicked() {
   }
    d = dist(clockImage.x,clockImage.y,mouseX,mouseY);
   if (currentClue === "I spy something that has hands but cannot clap" && d < 50) {
-    responsiveVoice.speak('Exactly, a clock, now how about you look at the time on the nearest clock to you for about, fifteen seconds');
+    responsiveVoice.speak('Exactly, a clock. Now how about you look at the time on the nearest clock to you for about, fifteen seconds');
      score = score + 1;
      newRound()
   }
@@ -523,5 +558,4 @@ function clicked() {
      score = score + 1;
      newRound()
   }
-
 }
